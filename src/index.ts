@@ -2,7 +2,7 @@ import { createApp } from './app';
 import { config } from './config';
 import { loggerPinoFactory } from './framework/logger/logger-pino';
 
-const version = process.env.npm_package_version || '0.0.0';
+const version = config.version || '0.0.0';
 
 const logger = loggerPinoFactory({
   version,

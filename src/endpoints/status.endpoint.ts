@@ -9,7 +9,7 @@ export const statusEndpointFactory = ({ version }: { version: string }): RouteOp
         type: 'object',
         properties: {
           timestamp: {
-            type: 'string',
+            type: 'number',
           },
           status: {
             type: 'string',

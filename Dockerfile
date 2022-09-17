@@ -16,5 +16,6 @@ COPY package.json yarn.lock .npmrc ./
 RUN yarn install --pure-lockfile --production
 COPY --from=builder /app/build /app/build
 ENV NODE_ENV production
+RUN export 
 
-CMD ["node", "./build/index.js"]
+CMD VERSION=$(node -p "require('./package.json').version") node ./build/index.js

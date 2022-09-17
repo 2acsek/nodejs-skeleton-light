@@ -13,6 +13,12 @@ const configObject = convict({
     default: '0.0.0.0',
     env: 'HOST',
   },
+  version: {
+    doc: 'The application version',
+    format: String,
+    default: '0.0.0',
+    env: 'VERSION',
+  },
   cors: {
     allowAll: {
       doc: 'CORS Allow All',

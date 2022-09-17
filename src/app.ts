@@ -19,7 +19,6 @@ export const createApp = async ({
   const server = fastify({
     logger,
   });
-
   const statusEndpoint = statusEndpointFactory({ version });
 
   server.register(fastifyCors, { origin: config.cors.allowAll ? '*' : config.cors.origins });
